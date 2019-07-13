@@ -23,6 +23,6 @@
 `$ ruby server/server.rb`<br>
 `$ python3 client/client.py`
 
-<hr>Requests log will be stored in `"./logs"` directory<hr>
+<hr>Requests log will be stored in _"./logs"_ directory<hr>
 
 ### End
