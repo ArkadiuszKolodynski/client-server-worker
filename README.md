@@ -10,19 +10,19 @@
 
 ### With docker-compose
 
-`$ git clone https://github.com/ArkadiuszKolodynski/client-server-worker.git`
-`$ cd client-server-worker`
-`$ docker-compose up -d`
+`$ git clone https://github.com/ArkadiuszKolodynski/client-server-worker.git`<br>
+`$ cd client-server-worker`<br>
+`$ docker-compose up -d`<br>
 `$ python3 client/client.py`
 
 ### Without docker
 
-`$ git clone https://github.com/ArkadiuszKolodynski/client-server-worker.git`
-`$ cd client-server-worker`
-`$ go build -o worker/worker.o worker/worker.go`
-`$ ruby server/server.rb`
+`$ git clone https://github.com/ArkadiuszKolodynski/client-server-worker.git`<br>
+`$ cd client-server-worker`<br>
+`$ go build -o worker/worker.o worker/worker.go`<br>
+`$ ruby server/server.rb`<br>
 `$ python3 client/client.py`
 
 <hr>Requests log will be stored in `"./logs"` directory<hr>
 
-###End
+### End
