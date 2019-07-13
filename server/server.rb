@@ -1,13 +1,12 @@
 require "socket"
 
 PORT = ARGV.index("--port") && ARGV[ARGV.index("--port")+1] ? ARGV[ARGV.index("--port")+1] : 3000
-LOG_PATH = "../logs"
+LOG_PATH = "logs"
 
 class Server
     def executeJob(expression)
         starting = Process.clock_gettime(Process::CLOCK_MONOTONIC)
-        worker = IO.popen(["go", "run", "../worker/worker.go", expression], mode="r")
-        # worker = IO.popen(["../worker/worker.o", expression], mode="r")
+        worker = IO.popen(["worker/worker.o", expression], mode="r")
         result = worker.gets
         ending = Process.clock_gettime(Process::CLOCK_MONOTONIC)
         return result, starting, ending
@@ -50,7 +49,6 @@ class Server
                     respondTime = Time.now
                     log("Respond to " + client_addrinfo.ip_address + " at " + respondTime.to_s + ": " + resultsArray.to_s)
         
-                    puts(output)
                     sock.puts(output)
                 ensure
                     sock.close
