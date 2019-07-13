@@ -4,7 +4,7 @@ import sys
 HOST = "127.0.0.1"
 PORT = (
     int(sys.argv[sys.argv.index("--port") + 1])
-    if sys.argv.index("--port") and sys.argv[sys.argv.index("--port") + 1]
+    if "--port" in sys.argv and sys.argv[sys.argv.index("--port") + 1]
     else 3000
 )
 

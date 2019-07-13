@@ -1,0 +1,9 @@
+version: "3"
+services:
+  server:
+    build: .
+    image: ruby/server
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./logs:/home/ruby-server/logs
